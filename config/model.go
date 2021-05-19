@@ -1,4 +1,4 @@
-package main
+package config
 
 type server struct {
 	Port string `toml:"port"`
