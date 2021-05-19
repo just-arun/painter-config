@@ -1,4 +1,4 @@
-package painterconfig
+package main
 
 import "github.com/just-arun/painter-config/config"
 
