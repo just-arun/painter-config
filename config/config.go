@@ -33,6 +33,16 @@ func InitConfig(path, name, fileType string) {
 	}
 }
 
+
+func GetConfig(path, name, fileType string) (Config) {
+	var err error
+	cof, err := LoadVars(path, name, fileType)
+	if err != nil {
+		panic(err)
+	}
+	return cof
+}
+
 // func GetVar() config {
 // 	conf, _ := LoadVars("./../")
 // 	return conf
