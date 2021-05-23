@@ -1,4 +1,4 @@
-package config
+package painterconfig
 
 import "github.com/spf13/viper"
 

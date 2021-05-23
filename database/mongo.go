@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/just-arun/painter-config/config"
+	painterconfig "github.com/just-arun/painter-config"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.mongodb.org/mongo-driver/mongo/readpref"
@@ -13,7 +13,7 @@ import (
 
 func GetMongoInstance() *mongo.Client {
 	// Replace the uri string with your MongoDB deployment's connection string.
-	uri := config.AppConfig.Database.Mongo.MongoURI
+	uri := painterconfig.AppConfig.Database.Mongo.MongoURI
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 	client, err := mongo.Connect(ctx, options.Client().ApplyURI(uri))

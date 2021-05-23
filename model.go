@@ -1,4 +1,4 @@
-package config
+package painterconfig
 
 type server struct {
 	Port string `toml:"port"`
